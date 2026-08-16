@@ -1,6 +1,6 @@
 import "../style.css";
 import { state, addTask } from "./state.js";
-import { taskForm, taskInput, taskError } from "./dom.js";
+import { taskForm, taskInput, taskError, renderTasks } from "./dom.js";
 
 taskForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -18,7 +18,7 @@ taskForm.addEventListener("submit", (event) => {
 
   addTask(title);
 
-  console.log(state.tasks);
+  renderTasks(state.tasks);
 
   taskInput.value = "";
 });

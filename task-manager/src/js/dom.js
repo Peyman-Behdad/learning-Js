@@ -8,8 +8,11 @@ export function renderTasks(tasks) {
 
   tasks.forEach((task) => {
     const taskElement = document.createElement("div");
-    taskElement.className = "mb-3 rounded-lg bg-white p-4 shadow-sm";
-    taskElement.textContent = task.title;
+    taskElement.className =
+      "mb-3 rounded-lg bg-white p-4 shadow-sm flex justify-between items-center text-lg";
+    taskElement.innerHTML = `
+    <span>${task.title}</span>
+    ${task.completed ? "<span><i class='fa-solid fa-check text-green-600 text-xl'></i></span>" : "<i class='fa-solid fa-xmark text-red-600 text-xl'></i></span>"}`;
 
     taskList.append(taskElement);
   });

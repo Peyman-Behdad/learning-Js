@@ -14,3 +14,9 @@ export function addTask(title) {
 
   state.tasks.push(task);
 }
+
+export function toggleTask(taskId) {
+  const task = state.tasks.find((task) => task.id === taskId);
+  if (!task) return;
+  task.completed = !task.completed;
+}

@@ -17,7 +17,6 @@ taskForm.addEventListener("submit", (event) => {
   taskError.classList.add("hidden");
 
   addTask(title);
-
   renderTasks(state.tasks);
 
   taskInput.value = "";

@@ -28,6 +28,12 @@ export function saveTasks() {
 }
 
 export function readTasks() {
-  const tasksjson = JSON.parse(saveTasks);
-  state.tasks.push(tasksjson);
+  const getTasks = localStorage.getItem("task");
+  const getItem = JSON.parse(getTasks);
+
+  if (getTasks === null) {
+    getTasks = localStorage.setItem([]);
+    return;
+  }
+  state.tasks = getItem;
 }

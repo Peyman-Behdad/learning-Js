@@ -1,5 +1,5 @@
 import "../style.css";
-import { state, addTask } from "./state.js";
+import { state, addTask, } from "./state.js";
 import { taskForm, taskInput, taskError, renderTasks } from "./dom.js";
 
 taskForm.addEventListener("submit", (event) => {

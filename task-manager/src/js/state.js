@@ -13,10 +13,21 @@ export function addTask(title) {
   };
 
   state.tasks.push(task);
+  saveTasks();
 }
 
 export function toggleTask(taskId) {
   const task = state.tasks.find((task) => task.id === taskId);
   if (!task) return;
   task.completed = !task.completed;
+  saveTasks();
+}
+
+export function saveTasks() {
+  localStorage.setItem("task", JSON.stringify(state.tasks));
+}
+
+export function readTasks() {
+  const tasksjson = JSON.parse(saveTasks);
+  state.tasks.push(tasksjson);
 }

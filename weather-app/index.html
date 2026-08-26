@@ -17,36 +17,40 @@
       class="w-90 mx-auto mt-20 px-10 py-5 rounded-2xl text-center text-white"
       style="background: linear-gradient(135deg, #34ffc9, #837dae)"
     >
-      <div class="w-full flex items-center justify-between">
+      <div class="search w-full flex items-center justify-between">
         <input
-          class="border-0 outline-0 text-gray-800 bg-white rounded-full pl-5 pr-10 py-2"
+          class="searchbox border-0 outline-0 text-gray-800 bg-white rounded-full pl-5 pr-10 py-2"
           type="text"
           placeholder="Enter city name"
         />
         <button
-          class="bg-white text-gray-800 p-2 rounded-full cursor-pointer text-center"
+          class="searchbtn bg-white text-gray-800 p-2 rounded-full cursor-pointer text-center"
         >
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
       <div class="">
         <div class="flex items-center flex-col mt-10">
-          <img src="src/assets/image/rainy.png" class="w-30" alt="" />
-          <p class="text-6xl font-bold mt-6">22°C</p>
-          <p class="text-5xl pt-3">New York</p>
+          <img
+            src="src/assets/image/rain.png"
+            class="w-30 weather-icon"
+            alt=""
+          />
+          <p class="temp text-6xl font-bold mt-6">22°C</p>
+          <p class="city text-5xl pt-3">New York</p>
         </div>
         <div class="flex items-center justify-between mt-10">
           <div class="flex items-center gap-1">
             <img src="src/assets/image/humidity.png" class="w-10" alt="" />
             <div class="text-start">
-              <p class="text-2xl">50%</p>
+              <p class="humidity text-2xl">50%</p>
               <p class="text-sm">Humidity</p>
             </div>
           </div>
           <div class="flex items-center gap-1">
             <img src="src/assets/image/wind.png" class="w-10" alt="" />
             <div class="text-start">
-              <p class="text-2xl">15 km/h</p>
+              <p class="wind text-2xl">15 km/h</p>
               <p class="text-sm">Wind Speed</p>
             </div>
           </div>

@@ -44,7 +44,7 @@ async function checkWeather(city) {
 
     weatherBox.style.display = "block";
     weatherBox.classList.remove = "hidden";
-    weatherError.style.display = "hidden";
+    weatherError.style.display = "none";
   }
 }
 

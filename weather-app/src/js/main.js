@@ -15,7 +15,7 @@ async function checkWeather(city) {
 
   if (response.status == 404) {
     weatherError.style.display = "block";
-    weatherError.classList.remove = "hidden";
+    weatherError.classList.remove("hidden");
     weatherBox.style.display = "none";
   } else {
     let data = await response.json();
@@ -43,7 +43,7 @@ async function checkWeather(city) {
     }
 
     weatherBox.style.display = "block";
-    weatherBox.classList.remove = "hidden";
+    weatherBox.classList.remove("hidden");
     weatherError.style.display = "none";
   }
 }

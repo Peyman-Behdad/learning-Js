@@ -19,35 +19,22 @@
           class="flex items-center justify-between rounded-full bg-[#edeef0] pl-5 mt-5 overflow-hidden"
         >
           <input
-            class="flex-1 flex outline-none p-2 font-semibold"
+            class="input-box flex-1 flex outline-none p-2 font-semibold"
             type="text"
-            id="input-box"
             placeholder="Add your task"
           />
           <button
-            class="px-10 py-3 bg-[#ff5945] text-white text-lg cursor-pointer rounded-full"
+            onclick="addTask()"
+            class="task-btn px-10 py-3 bg-[#ff5945] text-white text-lg cursor-pointer rounded-full"
           >
             Add
           </button>
         </div>
+        <div class="error pt-4 text-red-600 text-sm px-3 hidden">
+          <span>You must write something!</span>
+        </div>
         <div class="mt-5">
-          <ul id="list-container">
-            <li
-              class="select-none cursor-pointer text-lg py-3 px-10 before:content-[''] before:absolute before:size-7 before:rounded-full before:bg-cover before:bg-center before:top-3 before:left-2 before:bg-[url(/src/assets/images/uncheked.png)] relative line-through text-[#555]"
-            >
-              Task 1
-            </li>
-            <li
-              class="select-none cursor-pointer text-lg py-3 px-10 before:content-[''] before:absolute before:size-7 before:rounded-full before:bg-cover before:bg-center before:top-3 before:left-2 before:bg-[url(/src/assets/images/uncheked.png)] relative line-through text-[#555]"
-            >
-              Task 2
-            </li>
-            <li
-              class="select-none cursor-pointer text-lg py-3 px-10 before:content-[''] before:absolute before:size-7 before:rounded-full before:bg-cover before:bg-center before:top-3 before:left-2 before:bg-[url(/src/assets/images/uncheked.png)] relative line-through text-[#555]"
-            >
-              Task 3
-            </li>
-          </ul>
+          <ul class="list-container"></ul>
         </div>
       </div>
     </div>

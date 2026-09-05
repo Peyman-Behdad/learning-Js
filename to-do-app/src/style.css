@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+.list-container li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+.list-container li.checked::before {
+  background-image: url(/src/assets/images/cheked.png);
+}

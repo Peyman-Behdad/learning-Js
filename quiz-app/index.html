@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body class="bg-blue-950">
+    <div class="bg-white w-[90%] max-w-150 rounded-xl p-8 mt-25 mx-auto">
+      <div>
+        <p
+          class="text-3xl font-semibold text-blue-950 border-b border-gray-300 pb-7"
+        >
+          Simple Quiz
+        </p>
+      </div>
+      <div class="py-5">
+        <p id="question" class="text-xl font-semibold text-blue-950">
+          Question goes here
+        </p>
+        <div id="answer-btn">
+          <button
+            class="btn bg-white font-medium w-full border border-gray-300 p-2 my-2 rounded-lg text-left cursor-pointer text-gray-600 hover:bg-gray-900 hover:text-white duration-150"
+          >
+            Answer 1
+          </button>
+          <button
+            class="btn bg-white font-medium w-full border border-gray-300 p-2 my-2 rounded-lg text-left cursor-pointer text-gray-600 hover:bg-gray-900 hover:text-white duration-150"
+          >
+            Answer 2
+          </button>
+          <button
+            class="btn bg-white font-medium w-full border border-gray-300 p-2 my-2 rounded-lg text-left cursor-pointer text-gray-600 hover:bg-gray-900 hover:text-white duration-150"
+          >
+            Answer 3
+          </button>
+          <button
+            class="btn bg-white font-medium w-full border border-gray-300 p-2 my-2 rounded-lg text-left cursor-pointer text-gray-600 hover:bg-gray-900 hover:text-white duration-150"
+          >
+            Answer 4
+          </button>
+        </div>
+        <div class="hidden items-center justify-center mt-5">
+          <button
+            id="next-btn"
+            class="bg-blue-950 text-white font-semibold w-37.5 p-2.5 rounded-lg cursor-pointer"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

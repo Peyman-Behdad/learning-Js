@@ -2,7 +2,6 @@ const inputBox = document.querySelector(".input-box");
 const taskBtn = document.querySelector(".task-btn");
 const listContainer = document.querySelector(".list-container");
 const taskError = document.querySelector(".error");
-const icon = document.querySelector(".icon");
 
 function addTask() {
   if (inputBox.value == "") {

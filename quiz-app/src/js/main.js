@@ -1,5 +1,18 @@
 import "../style.css";
 import { nextBtn } from "./dom";
-import { startQuiz } from "./state";
+import {
+  currentQuestionIndex,
+  handleNextBtn,
+  question,
+  startQuiz,
+} from "./state";
 
 startQuiz();
+
+nextBtn.addEventListener("click", () => {
+  if (currentQuestionIndex < question.length) {
+    handleNextBtn();
+  } else {
+    startQuiz();
+  }
+});

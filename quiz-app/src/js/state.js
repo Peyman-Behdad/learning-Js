@@ -39,8 +39,8 @@ export const question = [
   },
 ];
 
-let currentQuestionIndex = 0;
-let score = 0;
+export let currentQuestionIndex = 0;
+export let score = 0;
 
 export function startQuiz() {
   currentQuestionIndex = 0;
@@ -102,7 +102,7 @@ function showScore() {
   nextBtnParent.classList.remove("hidden");
 }
 
-function handleNextBtn() {
+export function handleNextBtn() {
   currentQuestionIndex++;
   if (currentQuestionIndex < question.length) {
     showQuestion();
@@ -110,11 +110,3 @@ function handleNextBtn() {
     showScore();
   }
 }
-
-nextBtn.addEventListener("click", () => {
-  if (currentQuestionIndex < question.length) {
-    handleNextBtn();
-  } else {
-    startQuiz();
-  }
-});

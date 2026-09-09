@@ -58,7 +58,8 @@ function showQuestion() {
   currentQuestion.answer.forEach((answer) => {
     const button = document.createElement("button");
     button.innerHTML = answer.text;
-    button.className = `bg-white font-medium w-full border border-gray-300 p-2 my-2 rounded-lg text-left cursor-pointer text-gray-600 hover:bg-gray-900 disabled:cursor-no-drop hover:text-white duration-150`;
+    button.className = `bg-white font-medium w-full border border-gray-300 p-2 my-2 rounded-lg text-left cursor-pointer text-gray-600 duration-150`;
+    button.classList.add("btn");
     answerBtn.appendChild(button);
     if (answer.correct) {
       button.dataset.correct = answer.correct;
@@ -78,16 +79,42 @@ function selectAnswer(e) {
   const selectedBtn = e.target;
   const isCorrect = selectedBtn.dataset.correct === "true";
   if (isCorrect) {
-    selectedBtn.className = `bg-green-700/90  font-medium w-full border border-gray-300 p-2 my-2 rounded-lg text-left cursor-pointer text-white hover:bg-gray-900 hover:text-white duration-150 disabled:cursor-no-drop`;
+    selectedBtn.className = `bg-green-700/90  font-medium w-full border border-gray-300 p-2 my-2 rounded-lg text-left cursor-no-drop text-white duration-150`;
+    score++;
   } else {
-    selectedBtn.className = `bg-red-700/90 font-medium w-full border border-gray-300 p-2 my-2 rounded-lg text-left cursor-pointer text-white hover:bg-gray-900 hover:text-white duration-150 disabled:cursor-no-drop`;
+    selectedBtn.className = `bg-red-700/90 font-medium w-full border border-gray-300 p-2 my-2 rounded-lg text-left cursor-no-drop text-white duration-150`;
   }
   Array.from(answerBtn.children).forEach((button) => {
     if (button.dataset.correct === "true") {
-      button.className = `bg-green-700/90  font-medium w-full border border-gray-300 p-2 my-2 rounded-lg text-left cursor-pointer text-white hover:bg-gray-900 hover:text-white duration-150 disabled:cursor-no-drop`;
+      button.className = `bg-green-700/90  font-medium w-full border border-gray-300 p-2 my-2 rounded-lg text-left cursor-no-drop text-white duration-150`;
     }
     button.disabled = true;
   });
   nextBtnParent.classList.remove("hidden");
   nextBtnParent.classList.add("flex");
 }
+
+function showScore() {
+  resetState();
+  questionElement.innerHTML = `You scored ${score} out of ${question.length}`;
+  nextBtn.innerHTML = "Play Again";
+  nextBtnParent.classList.add("flex");
+  nextBtnParent.classList.remove("hidden");
+}
+
+function handleNextBtn() {
+  currentQuestionIndex++;
+  if (currentQuestionIndex < question.length) {
+    showQuestion();
+  } else {
+    showScore();
+  }
+}
+
+nextBtn.addEventListener("click", () => {
+  if (currentQuestionIndex < question.length) {
+    handleNextBtn();
+  } else {
+    startQuiz();
+  }
+});

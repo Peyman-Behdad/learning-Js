@@ -13,26 +13,33 @@
         <span class="text-green-700 border-b-4 pb-2">Random Password</span>
       </h1>
       <div
-        class="w-full mt-12.5 mb-7.5 bg-white text-[#333] flex items-center justify-between px-5 py-6 rounded-md"
+        class="relative w-full mt-12.5 mb-7.5 bg-white text-[#333] flex items-center justify-between px-5 py-6 rounded-md"
       >
         <input
           class="outline-none text-xl w-full"
           type="text"
           placeholder="Password"
           id="password"
+          readonly
         />
         <img
-          class="w-6 cursor-pointer"
+          class="copy w-6 cursor-pointer"
           src="src/assets/images/copy.png"
           alt=""
         />
+        <span
+          class="badge absolute right-0 top-0 bg-gray-500/60 text-white px-2 rounded-lg text-sm hidden"
+          >Copied</span
+        >
       </div>
       <button
-        class="flex items-center gap-2 bg-green-700 text-lg font-semibold px-6 py-3 justify-center rounded-lg cursor-pointer text-white"
+        class="password-btn flex items-center gap-2 bg-green-700 text-lg font-semibold px-6 py-3 justify-center rounded-lg cursor-pointer text-white"
       >
         <img class="w-7" src="src/assets/images/generate.png" alt="" />Generate
         Password
       </button>
     </div>
+
+    <script type="module" src="src/js/main.js"></script>
   </body>
 </html>

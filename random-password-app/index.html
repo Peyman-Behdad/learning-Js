@@ -6,5 +6,33 @@
     <title>Random Password</title>
     <link rel="stylesheet" href="src/style.css" />
   </head>
-  <body></body>
+  <body class="bg-[#002339] text-white">
+    <div class="w-[90%] m-[12%] max-w-175">
+      <h1 class="font-semibold text-[45px]">
+        Generate a<br />
+        <span class="text-green-700 border-b-4 pb-2">Random Password</span>
+      </h1>
+      <div
+        class="w-full mt-12.5 mb-7.5 bg-white text-[#333] flex items-center justify-between px-5 py-6 rounded-md"
+      >
+        <input
+          class="outline-none text-xl w-full"
+          type="text"
+          placeholder="Password"
+          id="password"
+        />
+        <img
+          class="w-6 cursor-pointer"
+          src="src/assets/images/copy.png"
+          alt=""
+        />
+      </div>
+      <button
+        class="flex items-center gap-2 bg-green-700 text-lg font-semibold px-6 py-3 justify-center rounded-lg cursor-pointer text-white"
+      >
+        <img class="w-7" src="src/assets/images/generate.png" alt="" />Generate
+        Password
+      </button>
+    </div>
+  </body>
 </html>

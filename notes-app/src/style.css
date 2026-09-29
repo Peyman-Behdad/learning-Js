@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+.main-box {
+  background: linear-gradient(135deg, #cf9aff, #95c0ff);
+}
+
+.btn {
+  background: linear-gradient(#9418fd, #571094);
+}
